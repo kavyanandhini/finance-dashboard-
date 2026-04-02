@@ -57,12 +57,12 @@
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; transition: background 0.3s, color 0.3s; }
   a { color: inherit; text-decoration: none; }
 
-  /* LAYOUT */
+
   .shell { display: flex; min-height: 100vh; }
   .sidebar { width: 240px; min-height: 100vh; background: var(--bg2); border-right: 1px solid var(--border); padding: 28px 0; display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; overflow-y: auto; transition: transform 0.3s; z-index: 100; }
   .main { flex: 1; min-width: 0; padding: 32px 28px; }
 
-  /* SIDEBAR */
+
   .logo { padding: 0 24px 32px; display: flex; align-items: center; gap: 10px; }
   .logo-mark { width: 34px; height: 34px; background: var(--accent); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
   .logo-mark svg { width: 18px; height: 18px; }
@@ -91,7 +91,7 @@
   .btn-danger { background: var(--red2); color: var(--red); border: none; }
   .btn-sm { padding: 5px 11px; font-size: 12px; }
 
-  /* SUMMARY CARDS */
+ 
   .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px,1fr)); gap: 14px; margin-bottom: 24px; }
   .sum-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; transition: transform 0.15s, box-shadow 0.15s; position: relative; overflow: hidden; }
   .sum-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
@@ -103,7 +103,7 @@
   .trend-down { color: var(--red); }
   .sum-card .accent-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; border-radius: 0 0 var(--radius) var(--radius); }
 
-  /* CHARTS SECTION */
+ 
   .charts-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 14px; margin-bottom: 24px; }
   .chart-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; }
   .chart-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
@@ -111,7 +111,7 @@
   .chart-legend { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 14px; font-size: 12px; color: var(--text2); }
   .legend-dot { width: 10px; height: 10px; border-radius: 2px; display: inline-block; margin-right: 5px; }
 
-  /* TRANSACTIONS */
+ 
   .section-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; margin-bottom: 24px; }
   .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
   .section-title { font-size: 15px; font-weight: 600; }
@@ -133,7 +133,7 @@
   .pill-expense { background: rgba(245,101,101,0.12); color: var(--red); }
   .empty-state { text-align: center; padding: 40px; color: var(--text3); font-size: 14px; }
 
-  /* INSIGHTS */
+ 
   .insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 14px; margin-bottom: 24px; }
   .insight-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
   .insight-label { font-size: 11px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text3); margin-bottom: 8px; }
@@ -142,7 +142,7 @@
   .progress-bar { height: 6px; background: var(--bg2); border-radius: 50px; margin-top: 10px; overflow: hidden; }
   .progress-fill { height: 100%; border-radius: 50px; transition: width 0.6s ease; }
 
-  /* MODAL */
+  
   .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 999; align-items: center; justify-content: center; }
   .modal-overlay.open { display: flex; }
   .modal { background: var(--card); border: 1px solid var(--border2); border-radius: var(--radius); padding: 28px; width: 420px; max-width: 95vw; }
@@ -154,32 +154,31 @@
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px; }
 
-  /* THEME TOGGLE */
+
   .theme-toggle { width: 36px; height: 36px; border-radius: var(--radius-sm); background: var(--card); border: 1px solid var(--border2); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
   .theme-toggle:hover { background: var(--card2); }
 
-  /* MOBILE SIDEBAR */
+ 
   .menu-toggle { display: none; width: 36px; height: 36px; border-radius: var(--radius-sm); background: var(--card); border: 1px solid var(--border2); cursor: pointer; align-items: center; justify-content: center; }
   .sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 99; }
 
-  /* EXPORT BTN */
+ 
   .export-row { display: flex; gap: 8px; flex-wrap: wrap; }
 
-  /* MONTHLY COMPARISON TABLE */
+
   .month-compare { width: 100%; border-collapse: collapse; font-size: 13px; }
   .month-compare th { font-size: 11px; letter-spacing: 0.6px; text-transform: uppercase; color: var(--text3); padding: 6px 12px; text-align: left; }
   .month-compare td { padding: 10px 12px; border-top: 1px solid var(--border); }
 
-  /* NOTIFICATIONS */
+
   .toast { position: fixed; bottom: 24px; right: 24px; background: var(--card); border: 1px solid var(--border2); border-radius: var(--radius-sm); padding: 12px 18px; font-size: 13px; z-index: 9999; transform: translateY(100px); opacity: 0; transition: all 0.3s; box-shadow: var(--shadow); }
   .toast.show { transform: translateY(0); opacity: 1; }
 
-  /* SCROLLBAR */
+
   ::-webkit-scrollbar { width: 6px; height: 6px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 50px; }
 
-  /* RESPONSIVE */
   @media (max-width: 900px) {
     .charts-grid { grid-template-columns: 1fr; }
   }
@@ -198,7 +197,7 @@
     .topbar { flex-direction: column; align-items: flex-start; }
   }
 
-  /* ANIMATIONS */
+ 
   @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
   .fade-in { animation: fadeIn 0.4s ease both; }
   .fade-in-1 { animation-delay: 0.05s; }
@@ -206,34 +205,32 @@
   .fade-in-3 { animation-delay: 0.15s; }
   .fade-in-4 { animation-delay: 0.2s; }
 
-  /* TABS */
   .tab-bar { display: flex; gap: 4px; background: var(--bg2); padding: 4px; border-radius: var(--radius-sm); }
   .tab { padding: 7px 16px; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer; color: var(--text2); transition: all 0.15s; }
   .tab.active { background: var(--card); color: var(--text); }
 
-  /* SORT ARROW */
+ ]
   .sort-btn { cursor: pointer; user-select: none; }
   .sort-btn:hover { color: var(--accent2); }
 
-  /* EDIT/DELETE BTNS */
   .action-btn { padding: 4px 9px; border-radius: 6px; font-size: 11px; cursor: pointer; border: none; font-family: 'DM Sans', sans-serif; font-weight: 500; transition: all 0.15s; margin-right: 4px; }
   .edit-btn { background: rgba(108,99,255,0.12); color: var(--accent2); }
   .edit-btn:hover { background: rgba(108,99,255,0.25); }
   .del-btn { background: rgba(245,101,101,0.12); color: var(--red); }
   .del-btn:hover { background: rgba(245,101,101,0.25); }
 
-  /* PAGES */
+
   .page { display: none; }
   .page.active { display: block; }
 
-  /* DIVIDER */
+ 
   .divider { height: 1px; background: var(--border); margin: 20px 0; }
 </style>
 </head>
 <body>
 
 <div class="shell">
-  <!-- SIDEBAR -->
+ 
   <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
   <nav class="sidebar" id="sidebar">
     <div class="logo">
@@ -273,7 +270,7 @@
     </div>
   </nav>
 
-  <!-- MAIN -->
+ 
   <main class="main">
     <!-- TOPBAR -->
     <div class="topbar">
@@ -297,9 +294,9 @@
       </div>
     </div>
 
-    <!-- DASHBOARD PAGE -->
+    
     <div class="page active fade-in" id="page-dashboard">
-      <!-- Summary Cards -->
+    
       <div class="summary-grid">
         <div class="sum-card fade-in fade-in-1">
           <div class="icon-circle" style="background:rgba(108,99,255,0.15);">
@@ -339,7 +336,7 @@
         </div>
       </div>
 
-      <!-- Charts -->
+    
       <div class="charts-grid">
         <div class="chart-card fade-in">
           <div class="chart-title">Balance Trend</div>
@@ -362,7 +359,7 @@
         </div>
       </div>
 
-      <!-- Recent Transactions (mini) -->
+     
       <div class="section-card fade-in">
         <div class="section-header">
           <div class="section-title">Recent Transactions</div>
@@ -372,7 +369,6 @@
       </div>
     </div>
 
-    <!-- TRANSACTIONS PAGE -->
     <div class="page fade-in" id="page-transactions">
       <div class="section-card">
         <div class="section-header">
@@ -417,7 +413,6 @@
       </div>
     </div>
 
-    <!-- INSIGHTS PAGE -->
     <div class="page fade-in" id="page-insights">
       <div class="insights-grid">
         <div class="insight-card">
@@ -443,7 +438,7 @@
         </div>
       </div>
 
-      <!-- Monthly Comparison -->
+    
       <div class="section-card">
         <div class="section-header">
           <div class="section-title">Monthly Comparison</div>
@@ -464,7 +459,7 @@
         </div>
       </div>
 
-      <!-- Category Breakdown Chart -->
+      
       <div class="chart-card">
         <div class="chart-title">Category Spending Trend</div>
         <div class="chart-sub">Monthly spending per category</div>
@@ -476,7 +471,6 @@
   </main>
 </div>
 
-<!-- ADD/EDIT TRANSACTION MODAL -->
 <div class="modal-overlay" id="txModal">
   <div class="modal">
     <div class="modal-title" id="modalTitle">Add Transaction</div>
@@ -526,11 +520,11 @@
   </div>
 </div>
 
-<!-- TOAST -->
+
 <div class="toast" id="toast"></div>
 
 <script>
-// ============ DATA ============
+
 const STORAGE_KEY = 'finflow_transactions_v2';
 
 const SEED_DATA = [
@@ -609,7 +603,7 @@ function saveData() {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(transactions)); } catch(e) {}
 }
 
-// ============ FORMATTING ============
+
 function fmt(n) { return '₹' + Math.abs(n).toLocaleString('en-IN'); }
 function fmtSigned(n) { return (n >= 0 ? '+₹' : '-₹') + Math.abs(n).toLocaleString('en-IN'); }
 
@@ -621,7 +615,7 @@ const CAT_COLORS = {
 };
 function catColor(c) { return CAT_COLORS[c] || '#a0aec0'; }
 
-// ============ STATS ============
+
 function calcStats() {
   const income = transactions.filter(t=>t.type==='income').reduce((s,t)=>s+t.amount,0);
   const expenses = transactions.filter(t=>t.type==='expense').reduce((s,t)=>s+t.amount,0);
@@ -650,7 +644,6 @@ function getCatBreakdown(monthPrefix) {
   return cats;
 }
 
-// ============ RENDER SUMMARIES ============
 function renderSummary() {
   const s = calcStats();
   document.getElementById('totalBalance').textContent = fmt(s.balance);
@@ -663,7 +656,7 @@ function renderSummary() {
   document.getElementById('expenseTrend').innerHTML = `<span>▼ ${transactions.filter(t=>t.type==='expense').length} transactions</span>`;
 }
 
-// ============ CHARTS ============
+
 function renderTrendChart() {
   const monthly = getMonthlyData().slice(-6);
   const labels = monthly.map(([m]) => { const [y,mo] = m.split('-'); return new Date(y,mo-1).toLocaleString('en',{month:'short',year:'2-digit'}); });
@@ -743,7 +736,7 @@ function renderCatTrendChart() {
   });
 }
 
-// ============ RECENT TRANSACTIONS ============
+
 function renderRecent() {
   const recent = [...transactions].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,5);
   const el = document.getElementById('recentTxList');
@@ -760,7 +753,7 @@ function renderRecent() {
 
 function fmtDate(d) { return new Date(d+'T00:00:00').toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'}); }
 
-// ============ TRANSACTIONS TABLE ============
+
 function renderTransactions() {
   const search = document.getElementById('searchInput').value.toLowerCase();
   const catF = document.getElementById('catFilter').value;
@@ -829,7 +822,7 @@ function sortBy(field) {
   renderTransactions();
 }
 
-// ============ INSIGHTS ============
+
 function renderInsights() {
   const s = calcStats();
   const cats = getCatBreakdown(null);
@@ -852,7 +845,7 @@ function renderInsights() {
   document.getElementById('biggestTx').textContent = fmt(biggest.amount);
   document.getElementById('biggestTxDesc').textContent = biggest.desc || '—';
 
-  // Monthly comparison table
+  
   const tbody = document.getElementById('monthCompareBody');
   tbody.innerHTML = [...monthly].reverse().slice(0,6).map(([m,d]) => {
     const net = d.income - d.expenses;
@@ -869,7 +862,7 @@ function renderInsights() {
   }).join('');
 }
 
-// ============ MODAL ============
+
 function openAddModal() {
   if (currentRole!=='admin') return;
   editId = null;
@@ -934,7 +927,7 @@ function deleteTransaction(id) {
   showToast('Transaction deleted.');
 }
 
-// ============ ROLE ============
+
 function setRole(role) {
   currentRole = role;
   document.getElementById('adminBtn').className = 'role-pill' + (role==='admin'?' active-admin':'');
@@ -945,7 +938,7 @@ function setRole(role) {
   showToast(role==='admin' ? '🔑 Admin mode — full access' : '👁 Viewer mode — read only');
 }
 
-// ============ THEME ============
+
 function toggleTheme() {
   isDark = !isDark;
   document.documentElement.setAttribute('data-theme', isDark?'dark':'light');
@@ -958,7 +951,7 @@ function toggleTheme() {
   }, 100);
 }
 
-// ============ PAGES ============
+
 function showPage(name, el) {
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+name).classList.add('active');
@@ -970,11 +963,11 @@ function showPage(name, el) {
   closeSidebar();
 }
 
-// ============ SIDEBAR MOBILE ============
+
 function toggleSidebar() { document.getElementById('sidebar').classList.toggle('open'); document.getElementById('sidebarOverlay').classList.toggle('open'); }
 function closeSidebar() { document.getElementById('sidebar').classList.remove('open'); document.getElementById('sidebarOverlay').classList.remove('open'); }
 
-// ============ EXPORT ============
+
 function exportCSV() {
   const h = ['Date','Description','Category','Type','Amount'];
   const rows = transactions.map(t=>[t.date,`"${t.desc}"`,t.category,t.type,t.amount]);
@@ -993,14 +986,14 @@ function download(name, type, content) {
 }
 function showExport() { exportCSV(); }
 
-// ============ TOAST ============
+
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg; t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 2800);
 }
 
-// ============ INIT ============
+
 function refreshAll() {
   renderSummary();
   renderTrendChart();
